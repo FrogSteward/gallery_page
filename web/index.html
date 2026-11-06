@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Olga Orlovska</title>
+<meta http-equiv="refresh" content="0; url=main_ua.html">
+<script>
+  // First visit -> Ukrainian main page. Afterwards -> the language the visitor used last.
+  (function () {
+    var lang = 'ua';
+    try { if (localStorage.getItem('siteLang') === 'en') lang = 'en'; } catch (e) {}
+    location.replace('main_' + lang + '.html');
+  })();
+</script>
+</head>
+<body>
+<p><a href="main_ua.html">Українська</a> · <a href="main_en.html">English</a></p>
+</body>
+</html>
